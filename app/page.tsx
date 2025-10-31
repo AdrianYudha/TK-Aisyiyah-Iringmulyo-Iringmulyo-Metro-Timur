@@ -135,7 +135,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://docs.google.com/forms/d/YOUR_GOOGLE_FORM_ID/viewform"
+              href="https://forms.gle/emTPDPfVH7vFb6rN7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
