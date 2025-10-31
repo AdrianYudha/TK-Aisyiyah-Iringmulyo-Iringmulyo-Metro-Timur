@@ -115,7 +115,7 @@ export default function GaleriPage() {
       <Navigation />
 
       {/* Header */}
-      <section className="bg-primary text-primary-foreground py-12">
+      <section className="bg-primary text-primary-foreground py-12 animate-fade-in-down">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold">Galeri Sekolah</h1>
           <p className="text-primary-foreground/80 mt-2">Dokumentasi kegiatan dan prestasi TK Aisyiyah Iringmulyo</p>
@@ -126,12 +126,12 @@ export default function GaleriPage() {
       <section className="py-12 md:py-16 flex-1">
         <div className="container mx-auto px-4">
           {/* Filter */}
-          <div className="flex flex-wrap gap-3 mb-8 justify-center">
+          <div className="flex flex-wrap gap-3 mb-8 justify-center animate-fade-in-down">
             <button
               onClick={() => setSelectedCategory("all")}
-              className={`px-6 py-2 rounded-full font-medium transition ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover-scale ${
                 selectedCategory === "all"
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-primary text-primary-foreground hover-scale"
                   : "bg-muted text-foreground hover:bg-muted/80"
               }`}
             >
@@ -139,9 +139,9 @@ export default function GaleriPage() {
             </button>
             <button
               onClick={() => setSelectedCategory("activity")}
-              className={`px-6 py-2 rounded-full font-medium transition ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover-scale ${
                 selectedCategory === "activity"
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-primary text-primary-foreground hover-scale"
                   : "bg-muted text-foreground hover:bg-muted/80"
               }`}
             >
@@ -149,9 +149,9 @@ export default function GaleriPage() {
             </button>
             <button
               onClick={() => setSelectedCategory("achievement")}
-              className={`px-6 py-2 rounded-full font-medium transition ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover-scale ${
                 selectedCategory === "achievement"
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-primary text-primary-foreground hover-scale"
                   : "bg-muted text-foreground hover:bg-muted/80"
               }`}
             >
@@ -159,9 +159,9 @@ export default function GaleriPage() {
             </button>
             <button
               onClick={() => setSelectedCategory("facility")}
-              className={`px-6 py-2 rounded-full font-medium transition ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover-scale ${
                 selectedCategory === "facility"
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-primary text-primary-foreground hover-scale"
                   : "bg-muted text-foreground hover:bg-muted/80"
               }`}
             >
@@ -171,18 +171,25 @@ export default function GaleriPage() {
 
           {/* Gallery Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredItems.map((item) => (
-              <Card key={item.id} className="overflow-hidden hover:shadow-lg transition flex flex-col h-full">
-                <div className="relative overflow-hidden bg-muted h-64">
+            {filteredItems.map((item, index) => (
+              <Card 
+                key={item.id} 
+                className="overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative overflow-hidden bg-muted h-64 group">
                   <img
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 group-hover:opacity-90"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p className="text-white text-sm line-clamp-2">{item.title}</p>
+                  </div>
                 </div>
-                <CardContent className="pt-4 flex-1 flex flex-col">
-                  <p className="font-bold text-foreground text-lg mb-2">{item.title}</p>
-                  <p className="text-sm text-muted-foreground mb-3 flex-1">{item.description}</p>
+                <CardContent className="pt-4 flex-1 flex flex-col transition-all duration-300">
+                  <p className="font-bold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">{item.title}</p>
+                  <p className="text-sm text-muted-foreground mb-3 flex-1 group-hover:text-foreground transition-colors">{item.description}</p>
                   <p className="text-xs text-accent font-semibold">
                     {item.category === "activity"
                       ? "🎨 Kegiatan"

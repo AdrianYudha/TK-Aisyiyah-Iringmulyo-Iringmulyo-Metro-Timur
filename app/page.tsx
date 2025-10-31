@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import TestimonialCarousel from "@/components/testimonial-carousel"
+import AnimatedNumber from "@/components/animated-number"
 
 export default function Home() {
   const faqs = [
@@ -78,8 +80,10 @@ export default function Home() {
     {
       name: "WhatsApp",
       icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.734.732 5.404 2.124 7.682l-2.261 6.541 6.718-2.221c2.252 1.235 4.763 1.884 7.297 1.884 5.372 0 9.748-4.361 9.77-9.799 0-2.634-.541-5.108-1.56-7.530-1.02-2.42-2.462-4.58-4.239-6.251-1.777-1.672-3.935-2.965-6.348-3.822-2.412-.857-4.989-1.294-7.755-1.294z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+          <path d="M21.5 12.5c0 1.8-1 3.5-2.5 4.9l-1.9 1.5c-1.2.9-2.7 1.5-4.2 1.8l-2.9.6c-1.2.2-2.4-.1-3.3-.9l-3.7-2.9c-1.6-1.3-2.5-3.2-2.6-5.2l-.1-4.2c0-1.4.4-2.8 1.2-4l1.5-1.9c1.4-1.5 3.1-2.5 4.9-2.5h2.9c1.2 0 2.4.3 3.4.9l3.3 2.5c.9.7 1.5 1.6 1.8 2.7l.6 2.9c.3 1.5-.1 3-1 4.2z" />
+          <path d="M17.5 8.5a6 6 0 1 1-12 0 6 6 0 1 1 12 0z" />
+          <circle cx="17.5" cy="8.5" r="1" />
         </svg>
       ),
       link: "https://wa.me/628219876543",
@@ -87,8 +91,10 @@ export default function Home() {
     {
       name: "Instagram",
       icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0-3.403 2.759-6.162 6.162-6.162 3.403 0 6.162 2.759 6.162 6.162 0 3.403-2.759 6.162-6.162 6.162-3.403 0-6.162-2.759-6.162-6.162zm3.35 0c0 1.557 1.255 2.812 2.812 2.812 1.557 0 2.812-1.255 2.812-2.812 0-1.557-1.255-2.812-2.812-2.812-1.557 0-2.812 1.255-2.812 2.812zm10.273-5.412c0 .795.645 1.44 1.44 1.44.795 0 1.44-.645 1.44-1.44-.001-.795-.646-1.44-1.44-1.44-.794 0-1.44.645-1.44 1.44z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+          <path d="M16 3H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5h8a5 5 0 0 0 5-5V8a5 5 0 0 0-5-5z" />
+          <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          <path d="M18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
         </svg>
       ),
       link: "https://instagram.com/tkaisyiyah",
@@ -96,8 +102,8 @@ export default function Home() {
     {
       name: "Facebook",
       icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
         </svg>
       ),
       link: "https://facebook.com/tkaisyiyah",
@@ -105,8 +111,9 @@ export default function Home() {
     {
       name: "YouTube",
       icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+          <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+          <path d="m10 15 5-3-5-3z" />
         </svg>
       ),
       link: "https://youtube.com/tkaisyiyah",
@@ -118,7 +125,7 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-32 md:py-48 overflow-hidden">
+      <section className="relative py-32 md:py-48 overflow-hidden animate-fade-in">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -129,23 +136,23 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40 z-0"></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance leading-tight">TK Aisyiyah Iringmulyo</h1>
-          <p className="text-xl md:text-2xl mb-8 text-balance opacity-95 font-bold">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance leading-tight animate-slide-up">TK Aisyiyah Iringmulyo</h1>
+          <p className="text-xl md:text-2xl mb-8 text-balance opacity-95 font-bold animate-slide-up delay-100">
             Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-200">
             <a
               href="https://forms.gle/emTPDPfVH7vFb6rN7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <button className="bg-gradient-to-r from-accent to-blue-600 hover:from-accent/90 hover:to-blue-700 text-accent-foreground font-bold px-8 py-3 rounded-md text-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+              <button className="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold px-8 py-3 rounded-md text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95">
                 Daftar Sekarang
               </button>
             </a>
             <Link href="#info">
-              <button className="border-2 border-white text-white hover:bg-white/20 bg-gradient-to-r from-transparent to-white/10 font-bold px-8 py-3 rounded-md text-lg transition-all duration-200">
+              <button className="border-2 border-white text-white bg-green-500/20 hover:bg-green-500/30 active:bg-green-500/40 font-bold px-8 py-3 rounded-md text-lg transition-all duration-300 transform hover:scale-105 active:scale-95">
                 Pelajari Lebih Lanjut
               </button>
             </Link>
@@ -153,13 +160,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-r from-primary/10 to-accent/10">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-primary/10 to-accent/10 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">{stat.value}</div>
-                <p className="text-lg font-semibold text-foreground">{stat.label}</p>
+              <div 
+                key={index} 
+                className="text-center animate-slide-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 transition-transform duration-300 hover:scale-110">
+                  <AnimatedNumber value={parseInt(stat.value)} className="text-5xl md:text-6xl font-bold text-primary" />
+                </div>
+                <p className="text-lg font-semibold text-foreground transition-colors duration-300 hover:text-primary">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -167,63 +180,72 @@ export default function Home() {
       </section>
 
       {/* Important Info Cards */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white animate-fade-in">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-primary">Informasi Penting</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Informasi Penting</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="border-2 border-primary/20 hover:border-primary/50 transition-colors rounded-lg p-6 bg-card">
-              <h3 className="text-primary text-xl font-bold mb-4">Pendaftaran Dibuka</h3>
-              <p className="text-3xl font-bold text-accent mb-2">1 November 2025</p>
-              <p className="text-muted-foreground font-medium">Pukul 08:00 WIB</p>
+            <div 
+              className="border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 rounded-lg p-6 bg-card transform hover:-translate-y-2 hover:shadow-lg"
+              style={{ animationDelay: '200ms' }}
+            >
+              <h3 className="text-primary text-xl font-bold mb-4 transition-colors duration-300">Pendaftaran Dibuka</h3>
+              <p className="text-3xl font-bold text-accent mb-2 transition-transform duration-300 hover:scale-110">1 November 2025</p>
+              <p className="text-muted-foreground font-medium transition-colors duration-300">Pukul 08:00 WIB</p>
             </div>
-            <div className="border-2 border-primary/20 hover:border-primary/50 transition-colors rounded-lg p-6 bg-card">
-              <h3 className="text-primary text-xl font-bold mb-4">Batas Pendaftaran</h3>
-              <p className="text-3xl font-bold text-accent mb-2">28 Februari 2025</p>
-              <p className="text-muted-foreground font-medium">Jangan sampai terlewatkan!</p>
+            <div 
+              className="border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 rounded-lg p-6 bg-card transform hover:-translate-y-2 hover:shadow-lg"
+              style={{ animationDelay: '300ms' }}
+            >
+              <h3 className="text-primary text-xl font-bold mb-4 transition-colors duration-300">Batas Pendaftaran</h3>
+              <p className="text-3xl font-bold text-accent mb-2 transition-transform duration-300 hover:scale-110">28 Februari 2025</p>
+              <p className="text-muted-foreground font-medium transition-colors duration-300">Jangan sampai terlewatkan!</p>
             </div>
-            <div className="border-2 border-primary/20 hover:border-primary/50 transition-colors rounded-lg p-6 bg-card">
-              <h3 className="text-primary text-xl font-bold mb-4">Pengumuman Hasil</h3>
-              <p className="text-3xl font-bold text-accent mb-2">20 Maret 2025</p>
-              <p className="text-muted-foreground font-medium">Harapkan kabar gembira!</p>
+            <div 
+              className="border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 rounded-lg p-6 bg-card transform hover:-translate-y-2 hover:shadow-lg"
+              style={{ animationDelay: '400ms' }}
+            >
+              <h3 className="text-primary text-xl font-bold mb-4 transition-colors duration-300">Pengumuman Hasil</h3>
+              <p className="text-3xl font-bold text-accent mb-2 transition-transform duration-300 hover:scale-110">20 Maret 2025</p>
+              <p className="text-muted-foreground font-medium transition-colors duration-300">Harapkan kabar gembira!</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About School Section */}
-      <section id="info" className="py-16 md:py-20 bg-muted/50">
+      <section id="info" className="py-16 md:py-20 bg-muted/50 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-slide-up">
               <h2 className="text-4xl font-bold mb-6 text-primary">Tentang TK Kami</h2>
               <div className="space-y-6">
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-2">
                   <h3 className="text-xl font-bold text-primary mb-2">Visi</h3>
-                  <p className="text-muted-foreground leading-relaxed font-medium">
+                  <p className="text-muted-foreground leading-relaxed font-medium transition-colors duration-300">
                     Terbentuknya Tunas Insan Pembelajar Yang Bertaqwa, Berakhlaq Mulia, Mandiri, Cakap Kreatif, dan
                     Peduli
                   </p>
                 </div>
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-2">
                   <h3 className="text-xl font-bold text-primary mb-3">Keunggulan Kami</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1">
                       <span className="text-accent font-bold text-lg flex-shrink-0">✓</span>
-                      <span className="text-muted-foreground font-medium">
+                      <span className="text-muted-foreground font-medium transition-colors duration-300">
                         Kurikulum berbasis nilai-nilai Islam dan pembelajaran bermain
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1">
                       <span className="text-accent font-bold text-lg flex-shrink-0">✓</span>
-                      <span className="text-muted-foreground font-medium">Guru bersertifikat dan berpengalaman</span>
+                      <span className="text-muted-foreground font-medium transition-colors duration-300">Guru bersertifikat dan berpengalaman</span>
                     </li>
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1">
                       <span className="text-accent font-bold text-lg flex-shrink-0">✓</span>
-                      <span className="text-muted-foreground font-medium">Fasilitas lengkap dan aman</span>
+                      <span className="text-muted-foreground font-medium transition-colors duration-300">Fasilitas lengkap dan aman</span>
                     </li>
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 transition-transform duration-300 hover:translate-x-1">
                       <span className="text-accent font-bold text-lg flex-shrink-0">✓</span>
-                      <span className="text-muted-foreground font-medium">
+                      <span className="text-muted-foreground font-medium transition-colors duration-300">
                         Program ekstrakurikuler beragam (Drumband, Tari, TPQ, Mewarnai)
                       </span>
                     </li>
@@ -231,28 +253,28 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-primary/30 rounded-lg p-6 bg-card">
+            <div className="border-2 border-primary/30 rounded-lg p-6 bg-card animate-slide-up delay-100 transition-all duration-300 hover:shadow-xl">
               <h3 className="text-primary text-2xl font-bold mb-6">Hubungi Kami</h3>
               <div className="space-y-6">
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-1">
                   <p className="font-bold text-foreground mb-1">Alamat</p>
                   <p className="text-muted-foreground font-medium">
                     Jl. Abri No. 26, Iringmulyo, Metro Timur, Metro, Lampung 34111
                   </p>
                 </div>
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-1">
                   <p className="font-bold text-foreground mb-1">Telepon</p>
                   <p className="text-muted-foreground font-medium">(0721) 123-456</p>
                 </div>
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-1">
                   <p className="font-bold text-foreground mb-1">WhatsApp</p>
-                  <a href="https://wa.me/628219876543" className="text-accent font-bold hover:underline">
+                  <a href="https://wa.me/628219876543" className="text-accent font-bold hover:underline transition-colors duration-300">
                     0821-9876-5432
                   </a>
                 </div>
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-1">
                   <p className="font-bold text-foreground mb-1">Email</p>
-                  <a href="mailto:info@tkaisyiyah.ac.id" className="text-accent font-bold hover:underline">
+                  <a href="mailto:info@tkaisyiyah.ac.id" className="text-accent font-bold hover:underline transition-colors duration-300">
                     info@tkaisyiyah.ac.id
                   </a>
                 </div>
@@ -262,28 +284,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 md:py-20 bg-white">
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-primary/5 to-accent/5 animate-fade-in">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center text-primary">Pertanyaan Umum (FAQ)</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Apa Kata Orang Tua</h2>
+          <div className="relative animate-slide-up delay-100">
+            <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
+            <TestimonialCarousel />
+          </div>
+        </div>
+      </section>
 
-          <div className="space-y-12">
-            {faqs.map((section) => (
-              <div key={section.category}>
-                <h3 className="text-2xl font-bold text-primary mb-6 pb-3 border-b-2 border-accent">
+      {/* FAQ Section */}
+      <section className="py-16 md:py-20 bg-white animate-fade-in">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Pertanyaan Umum (FAQ)</h2>
+
+          <div className="space-y-12 animate-slide-up delay-100">
+            {faqs.map((section, sectionIndex) => (
+              <div 
+                key={section.category} 
+                className="transition-all duration-300"
+                style={{ animationDelay: `${sectionIndex * 100}ms` }}
+              >
+                <h3 className="text-2xl font-bold text-primary mb-6 pb-3 border-b-2 border-accent transition-colors duration-300">
                   {section.category}
                 </h3>
                 <div className="space-y-4">
                   {section.questions.map((faq, idx) => (
                     <details
                       key={idx}
-                      className="border border-primary/20 rounded-lg overflow-hidden hover:border-primary/50 transition-colors"
+                      className="border border-primary/20 rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300"
                     >
-                      <summary className="cursor-pointer bg-muted/50 hover:bg-muted px-6 py-4 font-bold text-primary flex justify-between items-center">
+                      <summary className="cursor-pointer bg-muted/50 hover:bg-muted px-6 py-4 font-bold text-primary flex justify-between items-center transition-colors duration-300">
                         <span>{faq.q}</span>
-                        <span className="text-accent text-xl">+</span>
+                        <span className="text-accent text-xl transition-transform duration-300">+</span>
                       </summary>
-                      <div className="px-6 py-4 bg-white border-t border-primary/20 text-muted-foreground font-medium leading-relaxed">
+                      <div className="px-6 py-4 bg-white border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-300">
                         {faq.a}
                       </div>
                     </details>
@@ -293,10 +331,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 p-6 bg-primary/10 rounded-lg border-2 border-primary/30">
+          <div className="mt-12 p-6 bg-primary/10 rounded-lg border-2 border-primary/30 animate-slide-up delay-200 transition-all duration-300 hover:shadow-lg">
             <p className="text-center text-muted-foreground font-medium">
               Pertanyaan lain tidak tercantum? Silakan hubungi kami melalui WhatsApp{" "}
-              <a href="https://wa.me/628219876543" className="text-accent font-bold hover:underline">
+              <a href="https://wa.me/628219876543" className="text-accent font-bold hover:underline transition-colors duration-300">
                 0821-9876-5432
               </a>
             </p>
@@ -304,24 +342,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/50">
+      <section className="py-16 md:py-20 bg-muted/50 animate-fade-in">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center text-primary">Lokasi Sekolah</h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
+          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Lokasi Sekolah</h2>
+          <div className="grid md:grid-cols-2 gap-8 items-center animate-slide-up delay-100">
+            <div className="transition-transform duration-300 hover:translate-x-2">
               <p className="font-bold text-foreground mb-4 text-lg">Alamat Lengkap</p>
-              <p className="text-muted-foreground font-medium mb-6 text-lg">
+              <p className="text-muted-foreground font-medium mb-6 text-lg transition-colors duration-300">
                 Jl. Abri No. 26, Iringmulyo, Metro Timur, Kota Metro, Lampung 34111
               </p>
               <div className="space-y-4">
-                <div>
+                <div className="transition-transform duration-300 hover:translate-x-1">
                   <p className="font-bold text-foreground mb-2">Jam Operasional</p>
                   <p className="text-muted-foreground font-medium">Senin - Jumat: 07:00 - 14:00 WIB</p>
-                  <p className="text-muted-foreground font-medium">Sabtu: 07:00 - 11:00 WIB</p>
                 </div>
               </div>
             </div>
-            <div className="w-full h-96 rounded-lg overflow-hidden border-2 border-primary/30 hover-shadow">
+            <div className="w-full h-96 rounded-lg overflow-hidden border-2 border-primary/30 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
               <iframe
                 width="100%"
                 height="100%"
@@ -337,20 +374,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white animate-fade-in">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center text-primary">Ikuti Kami</h2>
-          <div className="flex justify-center gap-6 flex-wrap">
+          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Ikuti Kami</h2>
+          <div className="flex justify-center gap-6 flex-wrap animate-slide-up delay-100">
             {socialMedia.map((media, index) => (
               <a
                 key={index}
                 href={media.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all duration-200 group"
+                className="flex flex-col items-center gap-2 p-4 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-primary group-hover:text-accent transition-colors duration-200">{media.icon}</div>
-                <p className="font-bold text-primary text-sm group-hover:text-accent transition-colors duration-200">
+                <div className="text-primary group-hover:text-accent transition-colors duration-300 transform group-hover:scale-110">{media.icon}</div>
+                <p className="font-bold text-primary text-sm group-hover:text-accent transition-colors duration-300">
                   {media.name}
                 </p>
               </a>

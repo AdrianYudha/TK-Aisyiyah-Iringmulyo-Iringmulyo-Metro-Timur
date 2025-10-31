@@ -26,7 +26,7 @@ export default function ConfirmEmailPage() {
           return
         }
 
-        // Supabase akan otomatis confirm email saat user klik link
+        // Proses konfirmasi email
         // Redirect ke login setelah beberapa detik
         setMessage("Email Anda berhasil dikonfirmasi! Silakan login dengan akun Anda.")
         setTimeout(() => {

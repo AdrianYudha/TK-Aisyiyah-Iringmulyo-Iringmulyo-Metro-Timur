@@ -266,7 +266,7 @@ export default function DaftarPage() {
                 )}
                 <Button
                   onClick={handleNextStep}
-                  className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold py-3 rounded-lg transition-all shadow-md hover:shadow-lg"
+                  className="flex-1 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95"
                   disabled={loading}
                 >
                   {loading ? "Memproses..." : step === 1 ? "Lanjutkan" : "Daftar"}

@@ -21,6 +21,7 @@ interface Registration {
   status: string
   group_level: string
   created_at: string
+  documents?: any
 }
 
 export default function DashboardPage() {
@@ -45,7 +46,7 @@ export default function DashboardPage() {
 
   const fetchRegistration = async (userId: string) => {
     try {
-      const response = await fetch(`/api/registrations/${userId}`)
+      const response = await fetch(`/api/registrations?userId=${userId}`)
       const data = await response.json()
       if (response.ok) {
         setRegistration(data)
@@ -131,7 +132,23 @@ export default function DashboardPage() {
             </Card>
           </div>
 
-          {registration && (
+          {!registration ? (
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-primary">Belum Melakukan Pendaftaran</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6">
+                  Anda belum melakukan pendaftaran. Silakan lengkapi formulir pendaftaran terlebih dahulu.
+                </p>
+                <Link href="/daftar/form">
+                  <Button className="bg-primary hover:bg-primary/90">
+                    Mulai Pendaftaran
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          ) : (
             <Card>
               <CardHeader>
                 <CardTitle className="text-primary">Data Pendaftaran</CardTitle>
@@ -174,15 +191,65 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 flex gap-4">
-                  <Link href="/dashboard/edit" className="flex-1">
-                    <Button className="w-full bg-primary hover:bg-primary/90">Edit Data</Button>
-                  </Link>
-                  <Link href="/dashboard/dokumen" className="flex-1">
-                    <Button variant="outline" className="w-full bg-transparent">
-                      Lihat Dokumen
-                    </Button>
-                  </Link>
+                <div className="mt-6">
+                  <p className="text-sm text-muted-foreground mb-4">Dokumen Persyaratan:</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div className="text-center">
+                      <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center ${
+                        registration.documents?.birthCertificate 
+                          ? "bg-green-100 text-green-600" 
+                          : "bg-muted text-muted-foreground"
+                      }`}>
+                        {registration.documents?.birthCertificate ? "✓" : "✕"}
+                      </div>
+                      <p className="text-xs font-medium">Akta Kelahiran</p>
+                    </div>
+                    <div className="text-center">
+                      <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center ${
+                        registration.documents?.familyCard 
+                          ? "bg-green-100 text-green-600" 
+                          : "bg-muted text-muted-foreground"
+                      }`}>
+                        {registration.documents?.familyCard ? "✓" : "✕"}
+                      </div>
+                      <p className="text-xs font-medium">KK</p>
+                    </div>
+                    <div className="text-center">
+                      <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center ${
+                        registration.documents?.parentPhoto 
+                          ? "bg-green-100 text-green-600" 
+                          : "bg-muted text-muted-foreground"
+                      }`}>
+                        {registration.documents?.parentPhoto ? "✓" : "✕"}
+                      </div>
+                      <p className="text-xs font-medium">Foto Ortu</p>
+                    </div>
+                    <div className="text-center">
+                      <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center ${
+                        registration.documents?.childPhoto 
+                          ? "bg-green-100 text-green-600" 
+                          : "bg-muted text-muted-foreground"
+                      }`}>
+                        {registration.documents?.childPhoto ? "✓" : "✕"}
+                      </div>
+                      <p className="text-xs font-medium">Foto Anak</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Link href="/daftar/form" className="flex-1">
+                      <Button className="w-full bg-primary hover:bg-primary/90">Edit Data</Button>
+                    </Link>
+                    <Link href="/daftar/upload" className="flex-1">
+                      <Button 
+                        variant="outline" 
+                        className="w-full bg-transparent"
+                        disabled={registration.status === "accepted" || registration.status === "rejected"}
+                      >
+                        {registration.documents ? "Edit Dokumen" : "Upload Dokumen"}
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </CardContent>
             </Card>

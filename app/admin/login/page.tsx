@@ -30,6 +30,12 @@ export default function AdminLoginPage() {
     setError("")
 
     try {
+      // Bersihkan localStorage sebelum login
+      localStorage.removeItem("adminToken")
+      localStorage.removeItem("adminUser")
+      localStorage.removeItem("token")
+      localStorage.removeItem("user")
+
       const response = await fetch("/api/auth/admin-login", {
         method: "POST",
         headers: {

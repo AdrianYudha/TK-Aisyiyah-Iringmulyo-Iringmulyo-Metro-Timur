@@ -5,10 +5,8 @@ export function middleware(request: NextRequest) {
 
   // Check if user is trying to access protected routes
   if (pathname.startsWith("/dashboard")) {
-    const token = request.cookies.get("token")?.value
-    if (!token) {
-      return NextResponse.redirect(new URL("/login", request.url))
-    }
+    // Note: Middleware can't access localStorage, so this check won't work for tokens stored there
+    // Client-side protection will handle this
   }
 
   // Check if admin is trying to access admin routes
@@ -19,10 +17,8 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/admin/pengumuman") ||
     pathname.startsWith("/admin/pengaturan")
   ) {
-    const adminToken = request.cookies.get("adminToken")?.value
-    if (!adminToken) {
-      return NextResponse.redirect(new URL("/admin/login", request.url))
-    }
+    // Note: Middleware can't access localStorage, so this check won't work for tokens stored there
+    // Client-side protection will handle this
   }
 
   return NextResponse.next()
