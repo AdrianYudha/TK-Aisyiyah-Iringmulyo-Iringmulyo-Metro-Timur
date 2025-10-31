@@ -173,7 +173,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="border-2 border-primary/20 hover:border-primary/50 transition-colors rounded-lg p-6 bg-card">
               <h3 className="text-primary text-xl font-bold mb-4">Pendaftaran Dibuka</h3>
-              <p className="text-3xl font-bold text-accent mb-2">1 Januari 2025</p>
+              <p className="text-3xl font-bold text-accent mb-2">1 November 2025</p>
               <p className="text-muted-foreground font-medium">Pukul 08:00 WIB</p>
             </div>
             <div className="border-2 border-primary/20 hover:border-primary/50 transition-colors rounded-lg p-6 bg-card">
