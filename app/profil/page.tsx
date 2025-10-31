@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import Image from "next/image"
 
 export default function ProfilPage() {
   const staff = [
@@ -208,10 +209,13 @@ export default function ProfilPage() {
                   className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                 >
                   <div className="relative w-full h-40 overflow-hidden">
-                    <img
+                    <Image
                       src={facility.image}
                       alt={facility.name}
+                      fill
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                   <CardHeader>

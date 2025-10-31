@@ -30,6 +30,12 @@ export default function Navigation() {
             <Link href="/profil" className="font-semibold hover:opacity-80 transition">
               Profil
             </Link>
+            <Link href="/program-pendidikan" className="font-semibold hover:opacity-80 transition">
+              Program Pendidikan
+            </Link>
+            <Link href="/cara-pendaftaran" className="font-semibold hover:opacity-80 transition">
+              Cara Pendaftaran
+            </Link>
             <Link href="/informasi" className="font-semibold hover:opacity-80 transition">
               Informasi
             </Link>
@@ -54,6 +60,12 @@ export default function Navigation() {
             </Link>
             <Link href="/profil" className="block py-2 font-semibold hover:opacity-80">
               Profil
+            </Link>
+            <Link href="/program-pendidikan" className="block py-2 font-semibold hover:opacity-80">
+              Program Pendidikan
+            </Link>
+            <Link href="/cara-pendaftaran" className="block py-2 font-semibold hover:opacity-80">
+              Cara Pendaftaran
             </Link>
             <Link href="/informasi" className="block py-2 font-semibold hover:opacity-80">
               Informasi

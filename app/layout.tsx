@@ -5,8 +5,14 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import ScrollToTop from "@/components/scroll-to-top"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const _geist = Geist({ 
+  subsets: ["latin"],
+  display: "swap" // Add swap for better font loading
+})
+const _geistMono = Geist_Mono({ 
+  subsets: ["latin"],
+  display: "swap" // Add swap for better font loading
+})
 
 export const metadata: Metadata = {
   title: "PPDB TK Aisyiyah Iringmulyo",
@@ -14,6 +20,11 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
   },
 }
 
@@ -24,6 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <head>
+        {/* Preload critical resources */}
+        <link rel="preload" href={_geist.variable} as="style" />
+        <link rel="preload" href={_geistMono.variable} as="style" />
+      </head>
       <body className={`font-sans antialiased`}>
         {children}
         <ScrollToTop />

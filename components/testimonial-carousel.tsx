@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 interface Testimonial {
   id: number;
@@ -96,9 +97,11 @@ export default function TestimonialCarousel() {
               <CardContent className="p-5">
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex-shrink-0 overflow-hidden border border-primary/30 flex items-center justify-center">
-                    <img 
+                    <Image 
                       src={`https://api.dicebear.com/6.x/initials/svg?seed=${testimonial.name}&backgroundColor=b6e3f4,c0aede,d1d4f9&radius=50&fontSize=40&padding=20`}
                       alt={testimonial.name} 
+                      width={48}
+                      height={48}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

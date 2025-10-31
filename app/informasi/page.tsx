@@ -260,6 +260,50 @@ export default function InformasiPage() {
         </div>
       </section>
 
+      {/* Keamanan dan Privasi */}
+      <section className="py-16 md:py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center text-primary">Kebijakan Privasi</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-l-4 border-l-primary">
+              <CardHeader>
+                <CardTitle className="text-primary">Perlindungan Data</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Kami menjamin kerahasiaan dan keamanan semua data pribadi yang Anda berikan selama proses pendaftaran.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span>Data hanya digunakan untuk proses penerimaan peserta didik baru</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span>Data tidak akan dibagikan kepada pihak ketiga</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span>Data disimpan dengan protokol keamanan tinggi</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-accent">
+              <CardHeader>
+                <CardTitle className="text-primary">Proses Penghapusan Data</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Data yang tidak diperlukan lagi akan dihapus secara aman setelah masa PPDB berakhir sesuai dengan ketentuan hukum yang berlaku.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )

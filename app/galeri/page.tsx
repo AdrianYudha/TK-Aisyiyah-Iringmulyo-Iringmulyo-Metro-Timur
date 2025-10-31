@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import Image from "next/image"
 
 export default function GaleriPage() {
   const [selectedCategory, setSelectedCategory] = useState("all")
@@ -178,10 +179,13 @@ export default function GaleriPage() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden bg-muted h-64 group">
-                  <img
+                  <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
+                    fill
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 group-hover:opacity-90"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: "cover" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <p className="text-white text-sm line-clamp-2">{item.title}</p>

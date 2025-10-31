@@ -1,8 +1,10 @@
 import Link from "next/link"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import TestimonialCarousel from "@/components/testimonial-carousel"
 import AnimatedNumber from "@/components/animated-number"
+import ContactForm from "@/components/contact-form"
+import ClientTestimonialCarousel from "@/components/client-testimonial-carousel";
+import ClientFAQ from "@/components/client-faq";
 
 export default function Home() {
   const faqs = [
@@ -291,7 +293,7 @@ export default function Home() {
           <div className="relative animate-slide-up delay-100">
             <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
             <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
-            <TestimonialCarousel />
+            <ClientTestimonialCarousel />
           </div>
         </div>
       </section>
@@ -393,6 +395,62 @@ export default function Home() {
                 </p>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Hubungi Kami</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-slide-up delay-100">
+              <h3 className="text-2xl font-bold mb-6 text-primary">Punya Pertanyaan?</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Tim kami siap membantu Anda dengan segala pertanyaan mengenai pendaftaran, program pendidikan, atau informasi lainnya tentang TK Aisyiyah Iringmulyo.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Telepon</h4>
+                    <p className="text-muted-foreground">(0721) 123-456</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Email</h4>
+                    <p className="text-muted-foreground">info@tkaisyiyah.ac.id</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">WhatsApp</h4>
+                    <a href="https://wa.me/628219876543" className="text-accent font-bold hover:underline transition-colors duration-300">
+                      0821-9876-543
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="animate-slide-up delay-200">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
