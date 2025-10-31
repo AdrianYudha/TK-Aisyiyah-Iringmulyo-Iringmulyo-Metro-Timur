@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Portal Penerimaan Peserta Didik Baru TK Aisyiyah Iringmulyo",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 }
 
