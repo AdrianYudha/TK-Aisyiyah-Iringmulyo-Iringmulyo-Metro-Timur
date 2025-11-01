@@ -11,6 +11,14 @@ export default function GaleriPage() {
 
   const galleryItems = [
     {
+      id: 21,
+      title: "TPA (Taman Pendidikan Al-Qur'an)",
+      description:
+        "Mengembangkan kecerdasan spiritual melalui pembiasaan beribadah dan bersedekah di TPA (Taman Pendidikan Al-Qur'an).",
+      category: "activity",
+      image: "/tpa.jpeg",
+    },
+    {
       id: 1,
       title: "Kegiatan Belajar Bermain",
       description:
@@ -239,8 +247,19 @@ export default function GaleriPage() {
             {filteredItems.map((item, index) => (
               <Card 
                 key={item.id} 
-                className="overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full animate-fade-in-up"
+                className={`overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full animate-fade-in-up cursor-pointer`}
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => {
+                  if (item.title.includes("TPA")) {
+                    window.location.href = '/galeri/tpa';
+                  } else if (item.category === "activity") {
+                    window.location.href = '/galeri/aktivitas';
+                  } else if (item.category === "achievement") {
+                    window.location.href = '/galeri/prestasi';
+                  } else if (item.category === "facility") {
+                    window.location.href = '/galeri/fasilitas';
+                  }
+                }}
               >
                 <div className="relative overflow-hidden bg-muted h-64 group">
                   <Image
@@ -251,6 +270,9 @@ export default function GaleriPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: "cover" }}
                   />
+                  <div className="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">Lihat Detail</span>
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <p className="text-white text-sm line-clamp-2">{item.title}</p>
                   </div>

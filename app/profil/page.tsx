@@ -212,6 +212,14 @@ export default function ProfilPage() {
                   </p>
                 </CardContent>
               </Card>
+              <Card className="transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+                <CardContent className="">
+                  <p className="font-semibold text-primary mb-2 transition-colors duration-300">Mengembangkan kecerdasan spiritual melalui pembiasaan beribadah dan bersedekah</p>
+                  <p className="text-sm text-muted-foreground transition-colors duration-300">
+                    Melalui kegiatan TPA (Taman Pendidikan Al-Qur'an) dan kebiasaan sehari-hari
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
