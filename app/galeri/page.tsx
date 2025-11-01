@@ -270,9 +270,6 @@ export default function GaleriPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: "cover" }}
                   />
-                  <div className="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">Lihat Detail</span>
-                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <p className="text-white text-sm line-clamp-2">{item.title}</p>
                   </div>
@@ -280,13 +277,18 @@ export default function GaleriPage() {
                 <CardContent className="pt-4 flex-1 flex flex-col transition-all duration-300">
                   <p className="font-bold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">{item.title}</p>
                   <p className="text-sm text-muted-foreground mb-3 flex-1 group-hover:text-foreground transition-colors">{item.description}</p>
-                  <p className="text-xs text-accent font-semibold">
-                    {item.category === "activity"
-                      ? "🎨 Kegiatan"
-                      : item.category === "achievement"
-                        ? "🏆 Prestasi"
-                        : "🏢 Fasilitas"}
-                  </p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-xs text-accent font-semibold">
+                      {item.category === "activity"
+                        ? "🎨 Kegiatan"
+                        : item.category === "achievement"
+                          ? "🏆 Prestasi"
+                          : "🏢 Fasilitas"}
+                    </p>
+                    <span className="text-sm bg-primary text-primary-foreground px-3 py-1.5 rounded-md font-medium">
+                      Lihat Selengkapnya →
+                    </span>
+                  </div>
                 </CardContent>
               </Card>
             ))}
