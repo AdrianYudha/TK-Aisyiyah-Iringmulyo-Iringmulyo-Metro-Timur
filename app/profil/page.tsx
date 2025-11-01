@@ -220,6 +220,14 @@ export default function ProfilPage() {
                   </p>
                 </CardContent>
               </Card>
+              <Card className="transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+                <CardContent className="">
+                  <p className="font-semibold text-primary mb-2 transition-colors duration-300">Pengembangan kecerdasan kinestetik</p>
+                  <p className="text-sm text-muted-foreground transition-colors duration-300">
+                    Melalui kegiatan fisik dan gerak tubuh yang mendukung perkembangan motorik halus dan kasar
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
 

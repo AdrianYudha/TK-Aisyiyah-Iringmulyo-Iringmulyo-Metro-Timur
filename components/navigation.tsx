@@ -13,9 +13,6 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-4">
-            <div className="w-14 h-14 flex-shrink-0">
-              <Image src="/logo.jpg" alt="Logo TK Aisyiyah" width={56} height={56} />
-            </div>
             <div className="flex flex-col">
               <span className="font-bold text-2xl">TK Aisyiyah</span>
               <span className="text-xs font-medium opacity-90">Iringmulyo Metro Timur</span>
