@@ -95,7 +95,7 @@ export default function TestimonialCarousel() {
           <div key={testimonial.id} className="flex-shrink-0 w-72">
             <Card className="h-full border border-primary/30 bg-card hover:border-primary/70 transition-all shadow-lg hover:shadow-xl">
               <CardContent className="p-5">
-                <div className="flex items-start gap-3">
+                <div className="flex flex-col items-center text-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex-shrink-0 overflow-hidden border border-primary/30 flex items-center justify-center">
                     <Image 
                       src={`https://api.dicebear.com/6.x/initials/svg?seed=${testimonial.name}&backgroundColor=b6e3f4,c0aede,d1d4f9&radius=50&fontSize=40&padding=20`}
@@ -103,6 +103,7 @@ export default function TestimonialCarousel() {
                       width={48}
                       height={48}
                       className="w-full h-full object-cover"
+                      unoptimized
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         // Fallback image if the image doesn't load
@@ -111,14 +112,14 @@ export default function TestimonialCarousel() {
                     />
                   </div>
                   <div>
-                    <div className="flex mb-2">
+                    <div className="flex justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                         </svg>
                       ))}
                     </div>
-                    <p className="text-muted-foreground italic mb-3 text-sm">"{testimonial.content}"</p>
+                    <p className="text-muted-foreground italic mb-3 text-sm text-justify">"{testimonial.content}"</p>
                     <div>
                       <p className="font-bold text-primary text-sm">{testimonial.name}</p>
                       <p className="text-xs text-accent">{testimonial.role}</p>

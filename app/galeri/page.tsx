@@ -16,7 +16,7 @@ export default function GaleriPage() {
       description:
         "Anak-anak sedang melakukan kegiatan belajar sambil bermain di kelas. Metode pembelajaran kami menggabungkan pendidikan dengan keseruan bermain.",
       category: "activity",
-      image: "/anak-anak-bermain-di-kelas.jpg",
+      image: "/images/fasilitas/galeri1.jpeg",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function GaleriPage() {
       description:
         "Pelatihan drumband menjadi salah satu ekstrakurikuler unggulan kami yang mengembangkan bakat musik dan disiplin anak.",
       category: "activity",
-      image: "/anak-anak-bermain-drum.jpg",
+      image: "/images/fasilitas/galeri2.jpeg",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export default function GaleriPage() {
       description:
         "Prestasi gemilang! Tim drumband TK Aisyiyah meraih juara 2 konser devisi mandiri tingkat provinsi Lampung pada Maret 2025.",
       category: "achievement",
-      image: "/penghargaan-drumband.jpg",
+      image: "/images/fasilitas/galeri3.jpeg",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ export default function GaleriPage() {
       description:
         "Anak-anak sedang menampilkan pertunjukan tari kreasi yang indah dan mengesankan di panggung sekolah.",
       category: "activity",
-      image: "/anak-anak-menari.jpg",
+      image: "/images/fasilitas/galeri4.jpeg",
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ export default function GaleriPage() {
       description:
         "Prestasi tari kami terus berkembang dengan berbagai penghargaan di tingkat kota dan provinsi untuk kategori tari kreasi.",
       category: "achievement",
-      image: "/penghargaan-tari.jpg",
+      image: "/images/fasilitas/galeri5.jpeg",
     },
     {
       id: 6,
@@ -56,7 +56,7 @@ export default function GaleriPage() {
       description:
         "Area bermain yang aman dan menyenangkan dengan berbagai peralatan edukatif untuk mengembangkan motorik anak.",
       category: "facility",
-      image: "/playground-anak-anak.jpg",
+      image: "/images/fasilitas/galeri6.jpeg",
     },
     {
       id: 7,
@@ -64,7 +64,7 @@ export default function GaleriPage() {
       description:
         "Ruang kelas yang dirancang khusus untuk anak usia dini dengan fasilitas pembelajaran yang lengkap dan menyenangkan.",
       category: "facility",
-      image: "/ruang-kelas-sekolah.jpg",
+      image: "/images/fasilitas/ruang-kelas.jpeg",
     },
     {
       id: 8,
@@ -72,7 +72,7 @@ export default function GaleriPage() {
       description:
         "Perpustakaan yang dilengkapi dengan koleksi buku cerita dan buku pembelajaran yang menarik untuk anak-anak.",
       category: "facility",
-      image: "/perpustakaan-anak-anak.jpg",
+      image: "/images/fasilitas/perpustakaan.jpeg",
     },
     {
       id: 9,
@@ -80,7 +80,7 @@ export default function GaleriPage() {
       description:
         "Anak-anak belajar mengaji dan menghafal surat-surat pendek Al-Qur'an dalam program TPQ (Taman Pendidikan Qur'an).",
       category: "activity",
-      image: "/anak-anak-belajar-quran.jpg",
+      image: "/images/fasilitas/ruang-seni.jpeg",
     },
     {
       id: 10,
@@ -88,7 +88,7 @@ export default function GaleriPage() {
       description:
         "Prestasi mengesankan dalam lomba hafalan surat-surat pendek dan adzan dengan meraih juara 3 di level kota.",
       category: "achievement",
-      image: "/penghargaan-hafalan.jpg",
+      image: "/images/fasilitas/ruang-bermain-indoor.jpeg",
     },
     {
       id: 11,
@@ -96,7 +96,7 @@ export default function GaleriPage() {
       description:
         "Anak-anak mengekspresikan kreativitas melalui kegiatan seni lukis dan melukis di bawah bimbingan guru berpengalaman.",
       category: "activity",
-      image: "/anak-anak-melukis.jpg",
+      image: "/images/fasilitas/galeri1.jpeg",
     },
     {
       id: 12,
@@ -104,7 +104,71 @@ export default function GaleriPage() {
       description:
         "Anak-anak kami meraih berbagai penghargaan dalam lomba mewarnai tingkat kota dan provinsi, menunjukkan kreativitas luar biasa.",
       category: "achievement",
-      image: "/penghargaan-mewarnai.jpg",
+      image: "/images/fasilitas/galeri2.jpeg",
+    },
+    {
+      id: 13,
+      title: "Kegiatan Membaca Al-Qur'an",
+      description:
+        "Anak-anak belajar membaca Al-Qur'an dengan metode yang menyenangkan dan efektif untuk usia dini.",
+      category: "activity",
+      image: "/images/fasilitas/galeri3.jpeg",
+    },
+    {
+      id: 14,
+      title: "Penghargaan Sekolah Ramah Anak",
+      description:
+        "Penghargaan atas komitmen kami dalam menciptakan lingkungan belajar yang aman dan ramah anak.",
+      category: "achievement",
+      image: "/images/fasilitas/galeri4.jpeg",
+    },
+    {
+      id: 15,
+      title: "Kegiatan Outbond Edukatif",
+      description:
+        "Kegiatan outbond yang dirancang untuk mengembangkan kemandirian dan kerjasama tim pada anak-anak.",
+      category: "activity",
+      image: "/images/fasilitas/galeri5.jpeg",
+    },
+    {
+      id: 16,
+      title: "Ruang Perpustakaan Anak",
+      description:
+        "Ruang perpustakaan yang nyaman dengan koleksi buku yang menarik untuk meningkatkan minat baca anak.",
+      category: "facility",
+      image: "/images/fasilitas/galeri6.jpeg",
+    },
+    {
+      id: 17,
+      title: "Kegiatan Masak Bersama",
+      description:
+        "Kegiatan memasak sederhana yang mengenalkan anak-anak pada bahan makanan sehat dan pentingnya gizi.",
+      category: "activity",
+      image: "/images/fasilitas/ruang-kelas.jpeg",
+    },
+    {
+      id: 18,
+      title: "Pelatihan Kemandirian",
+      description:
+        "Program pelatihan kemandirian yang mengajarkan anak-anak untuk mandiri dalam kegiatan sehari-hari.",
+      category: "activity",
+      image: "/images/fasilitas/ruang-seni.jpeg",
+    },
+    {
+      id: 19,
+      title: "Kegiatan Bercocok Tanam",
+      description:
+        "Kegiatan bercocok tanam yang mengenalkan anak-anak pada alam dan pentingnya menjaga lingkungan.",
+      category: "activity",
+      image: "/images/fasilitas/playground.jpeg",
+    },
+    {
+      id: 20,
+      title: "Pameran Hasil Karya Anak",
+      description:
+        "Pameran hasil karya anak-anak yang menampilkan kreativitas dan kemajuan mereka selama di sekolah.",
+      category: "achievement",
+      image: "/images/fasilitas/perpustakaan.jpeg",
     },
   ]
 

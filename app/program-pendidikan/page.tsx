@@ -18,27 +18,27 @@ export default function ProgramPendidikan() {
       color: "accent"
     },
     {
-      title: "Matematika Dini",
-      description: "Mengenalkan konsep angka, bentuk, dan pola melalui permainan edukatif",
-      icon: "🔢",
-      color: "primary"
-    },
-    {
       title: "Seni & Kreativitas",
       description: "Mengembangkan ekspresi kreatif melalui seni lukis, tari, dan musik",
       icon: "🎨",
-      color: "accent"
+      color: "primary"
     },
     {
       title: "Motorik Halus & Kasar",
       description: "Mengembangkan koordinasi gerak melalui permainan dan kegiatan fisik",
       icon: "🏃",
-      color: "primary"
+      color: "accent"
     },
     {
       title: "Sosial Emosional",
       description: "Membentuk karakter dan kemampuan sosial anak melalui interaksi sehari-hari",
       icon: "🤝",
+      color: "primary"
+    },
+    {
+      title: "Pendekatan Individual",
+      description: "Memberikan pendekatan individual sesuai kebutuhan dan kecepatan belajar setiap anak",
+      icon: "👤",
       color: "accent"
     }
   ]
@@ -87,18 +87,20 @@ export default function ProgramPendidikan() {
                   <div className="relative w-full h-32 overflow-hidden">
                     <Image 
                       src={
-                        program.title === "Pendidikan Agama Islam" ? "https://images.unsplash.com/photo-1558981041-61017c1357b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" :
-                        program.title === "Bahasa & Literasi" ? "https://images.unsplash.com/photo-1559827260-43ab5575e46c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" :
-                        program.title === "Matematika Dini" ? "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" :
-                        program.title === "Seni & Kreativitas" ? "https://images.unsplash.com/photo-1579546929662-c1d7e92a4c78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" :
-                        program.title === "Motorik Halus & Kasar" ? "https://images.unsplash.com/photo-1542744094-2d8062d9d836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" :
-                        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+                        program.title === "Pendidikan Agama Islam" ? "https://picsum.photos/600/400?random=40" :
+                        program.title === "Bahasa & Literasi" ? "https://picsum.photos/600/400?random=41" :
+                        program.title === "Seni & Kreativitas" ? "https://picsum.photos/600/400?random=42" :
+                        program.title === "Motorik Halus & Kasar" ? "https://picsum.photos/600/400?random=43" :
+                        program.title === "Sosial Emosional" ? "https://picsum.photos/600/400?random=44" :
+                        program.title === "Pendekatan Individual" ? "https://picsum.photos/600/400?random=45" :
+                        "https://picsum.photos/600/400?random=46"
                       }
                       alt={program.title}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                       style={{ objectFit: "cover" }}
+                      unoptimized
                     />
                   </div>
                   <div className="p-5 flex-grow flex flex-col">
@@ -149,12 +151,13 @@ export default function ProgramPendidikan() {
               <Card className="hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full">
                 <div className="relative w-full h-40 overflow-hidden">
                   <Image 
-                    src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" 
+                    src="https://picsum.photos/600/400?random=50" 
                     alt="Bermain Sambil Belajar"
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                     style={{ objectFit: "cover" }}
+                    unoptimized
                   />
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
@@ -168,12 +171,13 @@ export default function ProgramPendidikan() {
               <Card className="hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full">
                 <div className="relative w-full h-40 overflow-hidden">
                   <Image 
-                    src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" 
+                    src="https://picsum.photos/600/400?random=51" 
                     alt="Project Based Learning"
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                     style={{ objectFit: "cover" }}
+                    unoptimized
                   />
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
@@ -187,12 +191,13 @@ export default function ProgramPendidikan() {
               <Card className="hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full">
                 <div className="relative w-full h-40 overflow-hidden">
                   <Image 
-                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" 
+                    src="https://picsum.photos/600/400?random=52" 
                     alt="Pendekatan Individual"
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                     style={{ objectFit: "cover" }}
+                    unoptimized
                   />
                 </div>
                 <div className="p-6 flex-grow flex flex-col">

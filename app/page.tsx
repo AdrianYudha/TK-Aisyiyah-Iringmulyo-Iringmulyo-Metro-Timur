@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import AnimatedNumber from "@/components/animated-number"
@@ -128,14 +129,17 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative py-32 md:py-48 overflow-hidden animate-fade-in">
-        <div
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: "url(/tk-aisyiyah-hero.jpg)",
-            opacity: 0.7,
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/40 z-0"></div>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/tk-aisyiyah-hero.jpg"
+            alt="TK Aisyiyah Iringmulyo"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/40 z-0"></div>
+        </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance leading-tight animate-slide-up">TK Aisyiyah Iringmulyo</h1>
@@ -301,7 +305,7 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-white animate-fade-in">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Pertanyaan Umum (FAQ)</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-primary animate-slide-up">Pertanyaan Umum</h2>
 
           <div className="space-y-12 animate-slide-up delay-100">
             {faqs.map((section, sectionIndex) => (
@@ -360,18 +364,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-96 rounded-lg overflow-hidden border-2 border-primary/30 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
-              <iframe
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                style={{ border: 0 }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7947.775848032404!2d105.32288677577618!3d-5.1217569948553585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40bc1d4fe923c9%3A0x3fa275bb9f435ff5!2sTK%20Paud%20Aisyiyah%20Iringmulyo!5e0!3m2!1sen!2sus!4v1761870531903!5m2!1sen!2sus"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+            <a 
+              href="https://www.google.com/maps/place/TK+Paud+Aisyiyah+Iringmulyo/@-5.121757,105.3228868,17z/data=!3m1!4b1!4m6!3m5!1s0x2e40bc1d4fe923c9:0x3fa275bb9f435ff5!8m2!3d-5.121757!4d105.3254627!16s%2Fg%2F11c6kz2yjf?entry=ttu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full h-96 rounded-lg overflow-hidden border-2 border-primary/30 block transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] relative group"
+            >
+              <div className="w-full h-full bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center text-gray-500">
+                <div className="text-center p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <p className="font-bold">Lokasi Sekolah</p>
+                  <p className="text-sm">Klik untuk membuka peta</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-white rounded-full p-3 shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>

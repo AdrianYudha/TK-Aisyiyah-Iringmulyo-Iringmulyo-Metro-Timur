@@ -3,13 +3,19 @@ import { type NextRequest, NextResponse } from "next/server"
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Extract token from cookies or Authorization header
+  const token = request.cookies.get('auth-token')?.value || 
+                request.headers.get('Authorization')?.replace('Bearer ', '')
+
   // Check if user is trying to access protected routes
   if (pathname.startsWith("/dashboard")) {
-    // Note: Middleware can't access localStorage, so this check won't work for tokens stored there
-    // Client-side protection will handle this
+    if (!token) {
+      // Redirect to login if not authenticated
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
   }
 
-  // Check if admin is trying to access admin routes
+  // Check if user is trying to access admin routes
   if (
     pathname.startsWith("/admin/dashboard") ||
     pathname.startsWith("/admin/pendaftar") ||
@@ -17,8 +23,12 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/admin/pengumuman") ||
     pathname.startsWith("/admin/pengaturan")
   ) {
-    // Note: Middleware can't access localStorage, so this check won't work for tokens stored there
-    // Client-side protection will handle this
+    if (!token) {
+      // Redirect to admin login if not authenticated
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
+    
+    // In a real app, you'd also verify the token and check admin role here
   }
 
   return NextResponse.next()

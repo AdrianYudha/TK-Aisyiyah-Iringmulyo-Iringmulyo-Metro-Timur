@@ -1,0 +1,135 @@
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/yudha/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/yudha/Downloads/TK-Aisyiyah-Iringmulyo-Iringmulyo-Metro-Timur/pnpm-lock.yaml
+
+   ▲ Next.js 16.0.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.103:3000
+
+ ✓ Starting...
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+ ✓ Ready in 1744ms
+ ○ Compiling /program-pendidikan ...
+ ⚠ Unsupported metadata viewport is configured in metadata export in /program-pendidikan. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /program-pendidikan 200 in 5.7s (compile: 4.9s, render: 795ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /program-pendidikan. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /program-pendidikan 200 in 278ms (compile: 10ms, render: 268ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /program-pendidikan. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /program-pendidikan 200 in 237ms (compile: 7ms, render: 230ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /program-pendidikan. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /program-pendidikan 200 in 232ms (compile: 5ms, render: 227ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 1240ms (compile: 1025ms, render: 215ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /program-pendidikan. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /program-pendidikan 200 in 88ms (compile: 7ms, render: 81ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /program-pendidikan. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 447ms
+ GET /program-pendidikan 200 in 155ms (compile: 18ms, render: 137ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 416ms (compile: 184ms, render: 232ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 715ms (compile: 13ms, render: 702ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1092ms (compile: 920ms, render: 172ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 148ms
+ GET / 200 in 111ms (compile: 5ms, render: 106ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 904ms (compile: 7ms, render: 896ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 457ms (compile: 191ms, render: 266ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 581ms (compile: 6ms, render: 575ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 316ms (compile: 7ms, render: 309ms)
+ ⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+ ⚠ `images.domains` is deprecated in favor of `images.remotePatterns`. Please update next.config.mjs to protect your application from malicious users.
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/yudha/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/yudha/Downloads/TK-Aisyiyah-Iringmulyo-Iringmulyo-Metro-Timur/pnpm-lock.yaml
+
+   ▲ Next.js 16.0.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.103:3000
+
+ ✓ Starting...
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+ ✓ Ready in 1759ms
+ ○ Compiling /profil ...
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 6.4s (compile: 5.3s, render: 1108ms)
+ ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1511632243188-3be9c3f8f2a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1561149133-80c1c4f0b84d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1585109743271-310fc8733038?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1510947255231-3c4d2e6d2d8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1503676278285-3e5d2b22d748?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 350ms (compile: 7ms, render: 343ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1561149133-80c1c4f0b84d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1510947255231-3c4d2e6d2d8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1503676278285-3e5d2b22d748?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1511632243188-3be9c3f8f2a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1585109743271-310fc8733038?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 420ms (compile: 5ms, render: 414ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1585109743271-310fc8733038?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1561149133-80c1c4f0b84d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1511632243188-3be9c3f8f2a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1510947255231-3c4d2e6d2d8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1503676278285-3e5d2b22d748?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⚠ Unsupported metadata viewport is configured in metadata export in /profil. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /profil 200 in 426ms (compile: 7ms, render: 419ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1510947255231-3c4d2e6d2d8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1561149133-80c1c4f0b84d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1585109743271-310fc8733038?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1503676278285-3e5d2b22d748?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1511632243188-3be9c3f8f2a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80 404
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/login. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /admin/login 200 in 1447ms (compile: 1006ms, proxy.ts: 194ms, render: 247ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1885ms (compile: 963ms, render: 922ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 387ms (compile: 11ms, render: 376ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1021ms (compile: 252ms, render: 769ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 337ms (compile: 13ms, render: 324ms)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 652ms (compile: 146ms, render: 506ms)
+ ✓ Compiled in 159ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 872ms (compile: 189ms, render: 683ms)
+[?25h
