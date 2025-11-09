@@ -15,21 +15,12 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Check if user is trying to access admin routes
-  if (
-    pathname.startsWith("/admin/dashboard") ||
-    pathname.startsWith("/admin/pendaftar") ||
-    pathname.startsWith("/admin/verifikasi") ||
-    pathname.startsWith("/admin/pengumuman") ||
-    pathname.startsWith("/admin/pengaturan")
-  ) {
-    if (!token) {
-      // Redirect to admin login if not authenticated
-      return NextResponse.redirect(new URL('/login', request.url));
-    }
-    
-    // In a real app, you'd also verify the token and check admin role here
-  }
+  // For admin routes, we'll implement role checking in the component itself
+  // since we're using localStorage for tokens rather than cookies
+  // The component will check localStorage for admin token and role
+  
+  // Note: For admin routes, we're not redirecting here since we use localStorage
+  // which can't be accessed by middleware. The role checking happens in components.
 
   return NextResponse.next()
 }

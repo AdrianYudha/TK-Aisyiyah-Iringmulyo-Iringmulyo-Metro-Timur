@@ -42,17 +42,17 @@ export default function ClientFAQ() {
       {faqs.map((faq, index) => (
         <Card 
           key={index} 
-          className="border border-primary/20 rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300"
+          className="border border-primary/20 rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-700"
         >
           <summary 
-            className="cursor-pointer bg-muted/50 hover:bg-muted px-6 py-4 font-bold text-primary flex justify-between items-center transition-colors duration-300"
+            className="cursor-pointer bg-muted/50 hover:bg-muted px-6 py-4 font-bold text-primary flex justify-between items-center transition-colors duration-700"
             onClick={() => toggleFAQ(index)}
           >
             {faq.question}
-            <span className={`text-accent text-xl transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''}`}>+</span>
+            <span className={`text-accent text-xl transition-transform duration-700 ${openIndex === index ? 'rotate-45' : ''}`}>+</span>
           </summary>
           {openIndex === index && (
-            <div className="px-6 py-4 bg-white border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-300">
+            <div className="px-6 py-4 bg-white border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-700">
               {faq.answer}
             </div>
           )}

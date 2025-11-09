@@ -25,6 +25,26 @@ const mockAdminUsers = [
   }
 ]
 
+export async function GET(request: NextRequest) {
+  try {
+    console.log("Debug: Available admin users:", mockAdminUsers.map(u => ({ 
+      email: u.email, 
+      password: u.password,
+      role: u.role 
+    })))
+    return NextResponse.json({
+      message: "Debug: Available admin users",
+      users: mockAdminUsers.map(u => ({ 
+        email: u.email, 
+        role: u.role 
+      }))
+    })
+  } catch (error) {
+    console.error("[v0] Debug endpoint error:", error)
+    return NextResponse.json({ message: "Terjadi kesalahan server" }, { status: 500 })
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -47,7 +67,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ message: "Email atau password salah" }, { status: 401 })
     }
 
-    console.log("Debug: Found user:", user)
+    console.log("Debug: Found user:", { email: user.email, role: user.role })
 
     if (user.role !== "admin") {
       console.log(`Debug: User with email ${email} is not an admin, role: ${user.role}`)

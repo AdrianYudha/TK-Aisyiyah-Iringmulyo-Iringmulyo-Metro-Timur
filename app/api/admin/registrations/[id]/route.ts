@@ -1,50 +1,21 @@
 import { type NextRequest, NextResponse } from "next/server";
-
-// Mock registrations data
-let mockRegistrations: any[] = [
-  {
-    id: "1",
-    user_id: "user_1",
-    child_name: "Anak Test",
-    child_birth_date: "2020-01-01",
-    child_gender: "Laki-laki",
-    group_level: "A",
-    parent_name: "Orang Tua Test",
-    parent_phone: "081234567890",
-    parent_email: "parent@example.com",
-    parent_address: "Alamat Test",
-    status: "pending",
-    documents: null,
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
-  },
-  {
-    id: "2",
-    user_id: "user_2",
-    child_name: "Anak Test 2",
-    child_birth_date: "2019-05-15",
-    child_gender: "Perempuan",
-    group_level: "B",
-    parent_name: "Orang Tua Test 2",
-    parent_phone: "089876543210",
-    parent_email: "parent2@example.com",
-    parent_address: "Alamat Test 2",
-    status: "verified",
-    documents: null,
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
-  }
-];
+import { mockRegistrations, validStatuses, writeRegistrations } from "@/lib/persistent-data";
 
 // PUT - Update status registrasi (untuk admin)
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    // Ambil params dari context (karena di Next.js 16 params adalah Promise)
+    const params = await context.params;
     const { id } = params;
     
+    console.log("Debug PUT: API received ID parameter:", id);
+    console.log("Debug PUT: Available registration IDs:", mockRegistrations.map(r => r.id));
+    
     if (!id) {
+      console.log("Debug PUT: ID is empty or null");
       return NextResponse.json(
         { message: "ID registrasi diperlukan." }, 
         { status: 400 }
@@ -55,7 +26,6 @@ export async function PUT(
     const { status } = body;
     
     // Validasi status
-    const validStatuses = ['pending', 'verified', 'accepted', 'rejected'];
     if (!validStatuses.includes(status)) {
       return NextResponse.json(
         { message: "Status tidak valid." }, 
@@ -78,6 +48,9 @@ export async function PUT(
       status,
       updated_at: new Date().toISOString()
     };
+    
+    // Simpan perubahan ke file
+    writeRegistrations(mockRegistrations);
     
     return NextResponse.json(
       { message: "Status berhasil diperbarui." }, 

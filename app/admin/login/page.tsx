@@ -30,11 +30,12 @@ export default function AdminLoginPage() {
     setError("")
 
     try {
-      // Bersihkan localStorage sebelum login
+      // Bersihkan localStorage sebelum login admin untuk mencegah konflik
       localStorage.removeItem("adminToken")
       localStorage.removeItem("adminUser")
-      localStorage.removeItem("token")
-      localStorage.removeItem("user")
+      // Jangan hapus token pengguna biasa karena bisa digunakan untuk login biasa
+
+      console.log("Mengirim data login:", formData)
 
       const response = await fetch("/api/auth/admin-login", {
         method: "POST",
@@ -44,7 +45,10 @@ export default function AdminLoginPage() {
         body: JSON.stringify(formData),
       })
 
+      console.log("Respons status:", response.status)
+
       const data = await response.json()
+      console.log("Data respons:", data)
 
       if (!response.ok) {
         setError(data.message || "Login gagal")
@@ -52,10 +56,14 @@ export default function AdminLoginPage() {
         return
       }
 
+      console.log("Login sukses, menyimpan token")
       localStorage.setItem("adminToken", data.token)
       localStorage.setItem("adminUser", JSON.stringify(data.user))
+      
+      console.log("Token disimpan, mengarahkan ke dashboard")
       router.push("/admin/dashboard")
     } catch (err) {
+      console.error("Error saat login:", err)
       setError("Terjadi kesalahan. Silakan coba lagi.")
       setLoading(false)
     }
@@ -78,7 +86,7 @@ export default function AdminLoginPage() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="admin@tkaisyiyah.ac.id"
+                placeholder="admin@tk.ac.id"
                 className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 autoComplete="off"
                 required

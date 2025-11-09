@@ -3,6 +3,13 @@ import { type NextRequest, NextResponse } from "next/server"
 // Mock user data - in real implementation, this would come from a database or config
 const mockUsers = [
   {
+    id: "0",
+    email: "admin@tk.ac.id",
+    full_name: "Administrator TK Aisyiyah",
+    role: "admin",
+    password: "admin" // In real implementation, this would be a hashed password
+  },
+  {
     id: "1",
     email: "admin@tkaisyiyah.ac.id",
     full_name: "Administrator TK Aisyiyah",

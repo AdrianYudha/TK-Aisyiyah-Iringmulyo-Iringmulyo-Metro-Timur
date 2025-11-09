@@ -30,9 +30,9 @@ export default function ContactForm() {
     
     // Simulasi pengiriman formulir
     try {
-      // Validasi sederhana
-      if (!formData.name || !formData.email || !formData.message) {
-        throw new Error('Silakan lengkapi semua field yang wajib diisi');
+      // Validasi semua field wajib
+      if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+        throw new Error('Mohon isi semua field yang wajib diisi: Nama Lengkap, Email, Nomor WhatsApp, dan Pesan');
       }
       
       // Simulasi delay pengiriman
@@ -50,7 +50,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 rounded-lg bg-card shadow-lg">
+    <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all duration-700 rounded-lg bg-card shadow-lg">
       <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5 border-b border-primary/10">
         <CardTitle className="text-primary text-xl">Hubungi Kami</CardTitle>
       </CardHeader>
@@ -99,7 +99,7 @@ export default function ContactForm() {
               
               <div>
                 <Label htmlFor="phone" className="text-sm font-semibold mb-2 text-foreground">
-                  Nomor WhatsApp (Opsional)
+                  Nomor WhatsApp *
                 </Label>
                 <Input
                   id="phone"

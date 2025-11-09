@@ -189,26 +189,26 @@ a[href^="https://nextjs.org"][target="_blank"] {
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.3s ease-out;
+    animation: fadeIn 1s ease-out;
   }
 
   .animate-fade-in-up {
-    animation: fadeInUp 0.5s ease-out;
+    animation: fadeInUp 1.2s ease-out;
   }
 
   .animate-slide-up {
-    animation: slideInUp 0.4s ease-out;
+    animation: slideInUp 1s ease-out;
   }
 
   .animate-fade-in-down {
-    animation: fadeInDown 0.3s ease-out;
+    animation: fadeInDown 1s ease-out;
   }
 
   .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
+    @apply transition-transform duration-700 hover:scale-105;
   }
 
   .hover-shadow {
-    @apply transition-shadow duration-200 hover:shadow-lg;
+    @apply transition-shadow duration-700 hover:shadow-lg;
   }
 }

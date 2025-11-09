@@ -1,8 +1,41 @@
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useEffect, useRef } from "react";
 
 export default function InformasiPage() {
+  const { isVisible, registerElement } = useScrollAnimation();
+  const syaratUsiaRef = useRef<HTMLDivElement>(null);
+  const dokumenPersyaratanRef = useRef<HTMLDivElement>(null);
+  const rincianBiayaRef = useRef<HTMLDivElement>(null);
+  const jadwalPentingRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
+  const kebijakanPrivasiRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (syaratUsiaRef.current) {
+      registerElement('syarat-usia', syaratUsiaRef.current);
+    }
+    if (dokumenPersyaratanRef.current) {
+      registerElement('dokumen-persyaratan', dokumenPersyaratanRef.current);
+    }
+    if (rincianBiayaRef.current) {
+      registerElement('rincian-biaya', rincianBiayaRef.current);
+    }
+    if (jadwalPentingRef.current) {
+      registerElement('jadwal-penting', jadwalPentingRef.current);
+    }
+    if (faqRef.current) {
+      registerElement('faq', faqRef.current);
+    }
+    if (kebijakanPrivasiRef.current) {
+      registerElement('kebijakan-privasi', kebijakanPrivasiRef.current);
+    }
+  }, [registerElement]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -19,10 +52,33 @@ export default function InformasiPage() {
       <section className="py-12 md:py-16 flex-1">
         <div className="container mx-auto px-4">
           {/* Syarat Usia */}
-          <div className="mb-12">
+          <div
+            ref={syaratUsiaRef}
+            className={`mb-12 transition-all duration-700 ease-out transform-gpu ${
+              isVisible['syarat-usia'] !== undefined
+                ? (isVisible['syarat-usia']
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10')
+                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
+            }`}
+          >
             <h2 className="text-3xl font-bold mb-6 text-primary">Syarat Usia Calon Peserta Didik</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <CardTitle className="text-primary">Kelompok Bermain</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-lg font-bold text-accent mb-2">Usia Minimal: 3 Tahun</p>
+                  <p className="text-muted-foreground mb-4">
+                    Dihitung per 1 Juli tahun berjalan sesuai dengan Permendikbud.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Contoh: Anak yang lahir pada 1 Juli 2021 - 30 Juni 2022 dapat mendaftar di Kelompok Bermain.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-l-accent">
                 <CardHeader>
                   <CardTitle className="text-primary">Kelompok A</CardTitle>
                 </CardHeader>
@@ -36,7 +92,7 @@ export default function InformasiPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-primary">
                 <CardHeader>
                   <CardTitle className="text-primary">Kelompok B</CardTitle>
                 </CardHeader>
@@ -54,7 +110,16 @@ export default function InformasiPage() {
           </div>
 
           {/* Dokumen Persyaratan */}
-          <div className="mb-12">
+          <div
+            ref={dokumenPersyaratanRef}
+            className={`mb-12 transition-all duration-700 ease-out transform-gpu ${
+              isVisible['dokumen-persyaratan'] !== undefined
+                ? (isVisible['dokumen-persyaratan']
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10')
+                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
+            }`}
+          >
             <h2 className="text-3xl font-bold mb-6 text-primary">Dokumen Persyaratan</h2>
             <Card>
               <CardHeader>
@@ -112,7 +177,16 @@ export default function InformasiPage() {
           </div>
 
           {/* Rincian Biaya */}
-          <div className="mb-12">
+          <div
+            ref={rincianBiayaRef}
+            className={`mb-12 transition-all duration-700 ease-out transform-gpu ${
+              isVisible['rincian-biaya'] !== undefined
+                ? (isVisible['rincian-biaya']
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10')
+                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
+            }`}
+          >
             <h2 className="text-3xl font-bold mb-6 text-primary">Rincian Biaya</h2>
             <Card>
               <CardContent className="pt-6">
@@ -142,7 +216,16 @@ export default function InformasiPage() {
           </div>
 
           {/* Jadwal Penting */}
-          <div className="mb-12">
+          <div
+            ref={jadwalPentingRef}
+            className={`mb-12 transition-all duration-700 ease-out transform-gpu ${
+              isVisible['jadwal-penting'] !== undefined
+                ? (isVisible['jadwal-penting']
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10')
+                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
+            }`}
+          >
             <h2 className="text-3xl font-bold mb-6 text-primary">Jadwal Penting</h2>
             <div className="space-y-4">
               <Card>
@@ -209,7 +292,16 @@ export default function InformasiPage() {
           </div>
 
           {/* FAQ */}
-          <div>
+          <div
+            ref={faqRef}
+            className={`animate-fade-in transition-all duration-700 ease-out transform-gpu ${
+              isVisible['faq'] !== undefined
+                ? (isVisible['faq']
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10')
+                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
+            }`}
+          >
             <h2 className="text-3xl font-bold mb-6 text-primary">Pertanyaan Umum</h2>
             <div className="space-y-4">
               <Card>
@@ -257,49 +349,84 @@ export default function InformasiPage() {
               </Card>
             </div>
           </div>
+
+
         </div>
       </section>
 
       {/* Keamanan dan Privasi */}
       <section className="py-16 md:py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-primary">Kebijakan Privasi</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-l-4 border-l-primary">
-              <CardHeader>
-                <CardTitle className="text-primary">Perlindungan Data</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Kami menjamin kerahasiaan dan keamanan semua data pribadi yang Anda berikan selama proses pendaftaran.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Data hanya digunakan untuk proses penerimaan peserta didik baru</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Data tidak akan dibagikan kepada pihak ketiga</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Data disimpan dengan protokol keamanan tinggi</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+          <div
+            ref={kebijakanPrivasiRef}
+            className={`mb-12 transition-all duration-700 ease-out transform-gpu ${
+              isVisible['kebijakan-privasi'] !== undefined
+                ? (isVisible['kebijakan-privasi']
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10')
+                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
+            }`}
+          >
+            <h2 className="text-3xl font-bold mb-12 text-center text-primary">Kebijakan Privasi</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <CardTitle className="text-primary">Perlindungan Data</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    Kami menjamin kerahasiaan dan keamanan semua data pribadi yang Anda berikan selama proses pendaftaran.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent font-bold">•</span>
+                      <span>Data hanya digunakan untuk proses penerimaan peserta didik baru</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent font-bold">•</span>
+                      <span>Data tidak akan dibagikan kepada pihak ketiga</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent font-bold">•</span>
+                      <span>Data disimpan dengan protokol keamanan tinggi</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
 
-            <Card className="border-l-4 border-l-accent">
-              <CardHeader>
-                <CardTitle className="text-primary">Proses Penghapusan Data</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Data yang tidak diperlukan lagi akan dihapus secara aman setelah masa PPDB berakhir sesuai dengan ketentuan hukum yang berlaku.
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="border-l-4 border-l-accent">
+                <CardHeader>
+                  <CardTitle className="text-primary">Proses Penghapusan Data</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Data yang tidak diperlukan lagi akan dihapus secara aman setelah masa PPDB berakhir sesuai dengan ketentuan hukum yang berlaku.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 md:py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary">Informasi Lebih Lanjut</h2>
+            <p className="text-muted-foreground mt-4">Hubungi kami untuk informasi lebih lanjut tentang pendaftaran dan sekolah</p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto bg-white rounded-lg border-2 border-primary/20 p-6 shadow-sm">
+            <div className="space-y-4">
+              <p className="text-lg font-bold text-center text-primary mb-6">Kontak Person</p>
+              <div className="space-y-3">
+                <p className="text-muted-foreground"><a href="https://wa.me/6287872582297" className="hover:underline">📞 0878-7258-2297 (Bunda Tri)</a></p>
+                <p className="text-muted-foreground"><a href="https://wa.me/6281541500923" className="hover:underline">📞 0815-4150-0923 (Bunda Risma)</a></p>
+                <p className="text-muted-foreground"><a href="https://wa.me/6285763680886" className="hover:underline">📞 0857-6368-0886 (Bunda Siti)</a></p>
+                <p className="text-muted-foreground"><a href="https://wa.me/6285839850938" className="hover:underline">📞 0858-3985-0938 (Bunda Lita)</a></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

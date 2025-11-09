@@ -1,41 +1,32 @@
 import { type NextRequest, NextResponse } from "next/server";
-
-// Mock registrations data
-let mockRegistrations: any[] = [
-  {
-    id: 1,
-    user_id: "user_1",
-    child_name: "Anak Test",
-    child_birth_date: "2020-01-01",
-    child_gender: "Laki-laki",
-    group_level: "A",
-    parent_name: "Orang Tua Test",
-    parent_phone: "081234567890",
-    parent_email: "parent@example.com",
-    parent_address: "Alamat Test",
-    status: "pending",
-    documents: null,
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString()
-  }
-];
+import { mockRegistrations, writeRegistrations, readRegistrations } from "@/lib/persistent-data";
 
 // GET - Mendapatkan data registrasi berdasarkan ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    // Ambil params dari context (karena di Next.js 16 params adalah Promise)
+    const params = await context.params;
     const { id } = params;
     
+    console.log("Debug: API received ID parameter:", id);
+    console.log("Debug: Available registration IDs:", mockRegistrations.map(r => r.id));
+    
     if (!id) {
+      console.log("Debug: ID is empty or null");
       return NextResponse.json(
         { message: "ID registrasi diperlukan." }, 
         { status: 400 }
       );
     }
     
-    const registration = mockRegistrations.find(r => r.id.toString() === id);
+    // Gunakan data terbaru dari file
+    const registrations = readRegistrations();
+    const registration = registrations.find(r => r.id === id);
+    
+    console.log("Debug: Looking for registration with ID:", id, "Found:", !!registration);
     
     if (!registration) {
       return NextResponse.json(
@@ -58,9 +49,11 @@ export async function GET(
 // PUT - Update dokumen registrasi
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    // Ambil params dari context (karena di Next.js 16 params adalah Promise)
+    const params = await context.params;
     const { id } = params;
     
     if (!id) {
@@ -81,7 +74,7 @@ export async function PUT(
     }
     
     // Find and update registration
-    const registrationIndex = mockRegistrations.findIndex(r => r.id.toString() === id);
+    const registrationIndex = mockRegistrations.findIndex(r => r.id === id);
     
     if (registrationIndex === -1) {
       return NextResponse.json(
@@ -95,6 +88,9 @@ export async function PUT(
       documents: documents,
       updated_at: new Date().toISOString()
     };
+    
+    // Simpan perubahan ke file
+    writeRegistrations(mockRegistrations);
     
     return NextResponse.json(
       { message: "Dokumen berhasil diperbarui." }, 

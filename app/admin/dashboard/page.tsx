@@ -137,7 +137,7 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Menu */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           <Card className="hover:shadow-lg transition cursor-pointer" onClick={() => router.push("/admin/pendaftar")}>
             <CardHeader>
               <CardTitle className="text-primary">Daftar Pendaftar</CardTitle>
@@ -162,6 +162,15 @@ export default function AdminDashboardPage() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">Umumkan hasil seleksi kepada pendaftar</p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition cursor-pointer" onClick={() => router.push("/admin/dashboard/print-all")}>
+            <CardHeader>
+              <CardTitle className="text-primary">Cetak Formulir</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">Cetak formulir pendaftaran</p>
             </CardContent>
           </Card>
 
