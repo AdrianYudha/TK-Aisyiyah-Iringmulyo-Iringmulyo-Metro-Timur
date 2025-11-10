@@ -9,27 +9,19 @@ import { useEffect, useRef } from "react";
 export default function InformasiPage() {
   const { isVisible, registerElement } = useScrollAnimation();
   const syaratUsiaRef = useRef<HTMLDivElement>(null);
-  const dokumenPersyaratanRef = useRef<HTMLDivElement>(null);
   const rincianBiayaRef = useRef<HTMLDivElement>(null);
   const jadwalPentingRef = useRef<HTMLDivElement>(null);
-  const faqRef = useRef<HTMLDivElement>(null);
   const kebijakanPrivasiRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (syaratUsiaRef.current) {
       registerElement('syarat-usia', syaratUsiaRef.current);
     }
-    if (dokumenPersyaratanRef.current) {
-      registerElement('dokumen-persyaratan', dokumenPersyaratanRef.current);
-    }
     if (rincianBiayaRef.current) {
       registerElement('rincian-biaya', rincianBiayaRef.current);
     }
     if (jadwalPentingRef.current) {
       registerElement('jadwal-penting', jadwalPentingRef.current);
-    }
-    if (faqRef.current) {
-      registerElement('faq', faqRef.current);
     }
     if (kebijakanPrivasiRef.current) {
       registerElement('kebijakan-privasi', kebijakanPrivasiRef.current);
@@ -109,72 +101,7 @@ export default function InformasiPage() {
             </div>
           </div>
 
-          {/* Dokumen Persyaratan */}
-          <div
-            ref={dokumenPersyaratanRef}
-            className={`mb-12 transition-all duration-700 ease-out transform-gpu ${
-              isVisible['dokumen-persyaratan'] !== undefined
-                ? (isVisible['dokumen-persyaratan']
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-10')
-                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
-            }`}
-          >
-            <h2 className="text-3xl font-bold mb-6 text-primary">Dokumen Persyaratan</h2>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-primary">Dokumen yang Harus Disiapkan</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold">
-                      1
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Akta Kelahiran</p>
-                      <p className="text-sm text-muted-foreground">
-                        Scan/foto akta kelahiran anak dalam format PDF atau JPG (ukuran maksimal 5MB)
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold">
-                      2
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Kartu Keluarga (KK)</p>
-                      <p className="text-sm text-muted-foreground">
-                        Scan/foto kartu keluarga dalam format PDF atau JPG (ukuran maksimal 5MB)
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold">
-                      3
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Pas Foto 3x4</p>
-                      <p className="text-sm text-muted-foreground">
-                        Foto digital anak ukuran 3x4 cm dalam format JPG (ukuran maksimal 2MB)
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold">
-                      4
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">KTP Orang Tua/Wali</p>
-                      <p className="text-sm text-muted-foreground">
-                        Scan/foto KTP orang tua atau wali dalam format PDF atau JPG (ukuran maksimal 5MB)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+
 
           {/* Rincian Biaya */}
           <div
@@ -291,64 +218,7 @@ export default function InformasiPage() {
             </div>
           </div>
 
-          {/* FAQ */}
-          <div
-            ref={faqRef}
-            className={`animate-fade-in transition-all duration-700 ease-out transform-gpu ${
-              isVisible['faq'] !== undefined
-                ? (isVisible['faq']
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-10')
-                : 'opacity-100 translate-y-0' // Default to visible if not yet observed
-            }`}
-          >
-            <h2 className="text-3xl font-bold mb-6 text-primary">Pertanyaan Umum</h2>
-            <div className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-primary">Bagaimana cara mendaftar?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Klik tombol "Daftar Sekarang" di halaman utama, isi formulir pendaftaran dengan data yang benar,
-                    upload dokumen yang diperlukan, dan submit formulir.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-primary">Apakah ada biaya pendaftaran?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Ya, biaya pendaftaran adalah Rp 100.000. Biaya ini tidak dapat dikembalikan.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-primary">Berapa lama proses verifikasi?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Proses verifikasi biasanya memakan waktu 2-3 minggu. Anda akan menerima notifikasi melalui email
-                    atau WhatsApp.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-primary">Bagaimana jika dokumen saya ditolak?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Jika ada dokumen yang kurang jelas atau tidak sesuai, panitia akan menghubungi Anda untuk
-                    memperbaiki. Anda dapat mengunggah ulang dokumen melalui akun Anda.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+
 
 
         </div>
@@ -404,28 +274,6 @@ export default function InformasiPage() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 md:py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">Informasi Lebih Lanjut</h2>
-            <p className="text-muted-foreground mt-4">Hubungi kami untuk informasi lebih lanjut tentang pendaftaran dan sekolah</p>
-          </div>
-          
-          <div className="max-w-2xl mx-auto bg-white rounded-lg border-2 border-primary/20 p-6 shadow-sm">
-            <div className="space-y-4">
-              <p className="text-lg font-bold text-center text-primary mb-6">Kontak Person</p>
-              <div className="space-y-3">
-                <p className="text-muted-foreground"><a href="https://wa.me/6287872582297" className="hover:underline">📞 0878-7258-2297 (Bunda Tri)</a></p>
-                <p className="text-muted-foreground"><a href="https://wa.me/6281541500923" className="hover:underline">📞 0815-4150-0923 (Bunda Risma)</a></p>
-                <p className="text-muted-foreground"><a href="https://wa.me/6285763680886" className="hover:underline">📞 0857-6368-0886 (Bunda Siti)</a></p>
-                <p className="text-muted-foreground"><a href="https://wa.me/6285839850938" className="hover:underline">📞 0858-3985-0938 (Bunda Lita)</a></p>
-              </div>
             </div>
           </div>
         </div>

@@ -376,18 +376,6 @@ export default function Home() {
                   Hubungi Kami
                 </h3>
                 <div className="space-y-6">
-                  {/* <div className="transition-transform duration-700 hover:translate-x-1">
-                    <p className="font-bold text-foreground mb-1">Alamat</p>
-                    <p className="text-muted-foreground font-medium">
-                      Jl. Abri No. 26, Iringmulyo, Metro Timur, Metro, Lampung 34111
-                    </p>
-                  </div> */}
-                  <div className="transition-transform duration-700 hover:translate-x-1">
-                    {/* <p className="font-bold text-foreground mb-1">Telepon</p>
-                    <p className="text-muted-foreground font-medium">
-                      (0721) 123-456
-                    </p> */}
-                  </div>
                   <div className="transition-transform duration-700 hover:translate-x-1">
                     <p className="font-bold text-foreground mb-1">WhatsApp</p>
                     <p className="text-red-500 font-medium mb-2">
