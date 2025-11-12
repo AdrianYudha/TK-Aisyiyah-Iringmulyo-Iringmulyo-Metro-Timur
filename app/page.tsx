@@ -195,16 +195,6 @@ export default function Home() {
               Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://forms.gle/emTPDPfVH7vFb6rN7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <button className="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold px-8 py-3 rounded-md text-lg transition-all duration-700 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95">
-                  Daftar Sekarang
-                </button>
-              </a>
               <Link href="#info">
                 <button className="border-2 border-white text-white bg-green-500/20 hover:bg-green-500/30 active:bg-green-500/40 font-bold px-8 py-3 rounded-md text-lg transition-all duration-700 transform hover:scale-105 active:scale-95">
                   Pelajari Lebih Lanjut
@@ -274,7 +264,7 @@ export default function Home() {
                   Batas Pendaftaran
                 </h3>
                 <p className="text-3xl font-bold text-accent mb-2 transition-transform duration-700 hover:scale-110">
-                  28 Februari 2025
+                  ----
                 </p>
                 <p className="text-muted-foreground font-medium transition-colors duration-700">
                   Jangan sampai terlewatkan!
@@ -289,7 +279,7 @@ export default function Home() {
                   Pengumuman Hasil
                 </h3>
                 <p className="text-3xl font-bold text-accent mb-2 transition-transform duration-700 hover:scale-110">
-                  20 Maret 2025
+                  -----
                 </p>
                 <p className="text-muted-foreground font-medium transition-colors duration-700">
                   Harapkan kabar gembira!

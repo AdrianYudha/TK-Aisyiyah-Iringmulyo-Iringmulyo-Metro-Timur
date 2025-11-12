@@ -120,23 +120,23 @@ export default function InformasiPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-4 border-b border-border">
                     <span className="font-semibold text-foreground">Biaya Pendaftaran</span>
-                    <span className="text-lg font-bold text-accent">Rp 100.000</span>
+                    <span className="text-lg font-bold text-accent">--</span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-border">
                     <span className="font-semibold text-foreground">Uang Pangkal</span>
-                    <span className="text-lg font-bold text-accent">Rp 2.000.000</span>
+                    <span className="text-lg font-bold text-accent">--</span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-border">
                     <span className="font-semibold text-foreground">SPP Bulanan</span>
-                    <span className="text-lg font-bold text-accent">Rp 500.000</span>
+                    <span className="text-lg font-bold text-accent">--</span>
                   </div>
                   <div className="flex justify-between items-center pt-4">
                     <span className="font-semibold text-foreground">Biaya Seragam & Perlengkapan</span>
-                    <span className="text-lg font-bold text-accent">Rp 1.500.000</span>
+                    <span className="text-lg font-bold text-accent">--</span>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground mt-6">
-                  Catatan: Biaya dapat berubah sesuai kebijakan sekolah. Hubungi sekolah untuk informasi terbaru.
+                  Catatan: Biaya akan diinformasikan lebih lanjut. Hubungi sekolah untuk informasi terbaru.
                 </p>
               </CardContent>
             </Card>
@@ -162,8 +162,8 @@ export default function InformasiPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-foreground">Pendaftaran Dibuka</p>
-                    <p className="text-accent font-bold">1 Januari 2025</p>
-                    <p className="text-sm text-muted-foreground">Mulai pukul 08:00 WIB</p>
+                    <p className="text-accent font-bold">--</p>
+                    <p className="text-sm text-muted-foreground">--</p>
                   </div>
                 </CardContent>
               </Card>
@@ -174,8 +174,8 @@ export default function InformasiPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-foreground">Batas Akhir Pendaftaran</p>
-                    <p className="text-accent font-bold">28 Februari 2025</p>
-                    <p className="text-sm text-muted-foreground">Pukul 17:00 WIB</p>
+                    <p className="text-accent font-bold">--</p>
+                    <p className="text-sm text-muted-foreground">--</p>
                   </div>
                 </CardContent>
               </Card>
@@ -186,8 +186,8 @@ export default function InformasiPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-foreground">Batas Verifikasi Dokumen</p>
-                    <p className="text-accent font-bold">15 Maret 2025</p>
-                    <p className="text-sm text-muted-foreground">Panitia menyelesaikan verifikasi</p>
+                    <p className="text-accent font-bold">--</p>
+                    <p className="text-sm text-muted-foreground">--</p>
                   </div>
                 </CardContent>
               </Card>
@@ -198,8 +198,8 @@ export default function InformasiPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-foreground">Pengumuman Hasil</p>
-                    <p className="text-accent font-bold">20 Maret 2025</p>
-                    <p className="text-sm text-muted-foreground">Cek status di akun Anda</p>
+                    <p className="text-accent font-bold">--</p>
+                    <p className="text-sm text-muted-foreground">--</p>
                   </div>
                 </CardContent>
               </Card>
@@ -210,8 +210,8 @@ export default function InformasiPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-foreground">Daftar Ulang</p>
-                    <p className="text-accent font-bold">1 - 10 April 2025</p>
-                    <p className="text-sm text-muted-foreground">Bagi yang diterima</p>
+                    <p className="text-accent font-bold">--</p>
+                    <p className="text-sm text-muted-foreground">--</p>
                   </div>
                 </CardContent>
               </Card>
