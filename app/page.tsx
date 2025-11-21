@@ -184,19 +184,19 @@ export default function Home() {
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-black/40 z-0"></div>
+            <div className="absolute inset-0 bg-black/40 dark:bg-black/60 z-0"></div>
           </div>
 
-          <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="relative z-10 container mx-auto px-4 text-center text-white dark:text-foreground">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance leading-tight">
               TK Aisyiyah Iringmulyo
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-balance opacity-95 font-bold">
+            <p className="text-xl md:text-2xl mb-8  font-bold">
               Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#info">
-                <button className="border-2 border-white text-white bg-green-500/20 hover:bg-green-500/30 active:bg-green-500/40 font-bold px-8 py-3 rounded-md text-lg transition-all duration-700 transform hover:scale-105 active:scale-95">
+                <button className="border-2 border-white text-white bg-primary/20 hover:bg-primary/30 active:bg-primary/40 font-bold px-8 py-3 rounded-md text-lg transition-all duration-700 transform hover:scale-105 active:scale-95 dark:border-foreground dark:bg-foreground/20 dark:hover:bg-foreground/30 dark:active:bg-foreground/40">
                   Pelajari Lebih Lanjut
                 </button>
               </Link>
@@ -234,7 +234,7 @@ export default function Home() {
 
       {/* Important Info Cards */}
       <ScrollAnimatedSection animationType="fade-in">
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-16 md:py-20 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-primary">
               Informasi Penting
@@ -435,8 +435,8 @@ export default function Home() {
               delay={100}
               className="relative"
             >
-              <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
-              <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
+              <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white to-transparent dark:from-background z-10"></div>
+              <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent dark:from-background z-10"></div>
               <ClientTestimonialCarousel />
             </ScrollAnimatedSection>
           </div>
@@ -445,7 +445,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <ScrollAnimatedSection animationType="fade-in">
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-16 md:py-20 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center text-primary">
               Pertanyaan Umum
@@ -478,7 +478,7 @@ export default function Home() {
                             +
                           </span>
                         </summary>
-                        <div className="px-6 py-4 bg-white border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-700">
+                        <div className="px-6 py-4 bg-white dark:bg-background border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-700">
                           {faq.a}
                         </div>
                       </details>
@@ -526,7 +526,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-full h-96 rounded-lg overflow-hidden border-2 border-primary/30 block transition-all duration-700 hover:shadow-2xl hover:scale-[1.02] relative group"
                 >
-                  <div className="w-full h-full bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center text-gray-500">
+                  <div className="w-full h-full bg-gray-200 dark:bg-muted border-2 border-dashed rounded-lg flex items-center justify-center text-gray-500 dark:text-foreground">
                     <div className="text-center p-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -552,8 +552,8 @@ export default function Home() {
                       <p className="text-sm">Klik untuk membuka peta</p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="bg-white rounded-full p-3 shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-700">
+                  <div className="absolute inset-0 bg-black/30 dark:bg-white/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white dark:bg-background rounded-full p-3 shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-700">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-8 w-8 text-primary"
@@ -578,7 +578,7 @@ export default function Home() {
       </ScrollAnimatedSection>
 
       <ScrollAnimatedSection animationType="fade-in">
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-16 md:py-20 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center text-primary">
               Ikuti Kami

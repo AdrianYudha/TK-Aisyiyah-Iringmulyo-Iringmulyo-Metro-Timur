@@ -84,7 +84,7 @@ export default function AchievementGalleryPage() {
             </div>
             <a
               href="/galeri"
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-6 py-3 rounded-md transition-colors duration-700 text-center"
+              className="bg-white dark:bg-background text-primary hover:bg-white/90 dark:hover:bg-background/90 font-semibold px-6 py-3 rounded-md transition-colors duration-700 text-center"
             >
               ← Kembali ke Galeri
             </a>
@@ -122,7 +122,7 @@ export default function AchievementGalleryPage() {
                     style={{ objectFit: "cover" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-4">
-                    <p className="text-white text-sm line-clamp-2">{item.title}</p>
+                    <p className="text-white dark:text-foreground text-sm line-clamp-2">{item.title}</p>
                   </div>
                 </div>
                 <CardContent className="pt-4 flex-1 flex flex-col transition-all duration-700">

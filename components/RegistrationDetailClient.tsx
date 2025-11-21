@@ -260,8 +260,8 @@ export default function RegistrationDetailClient({ initialRegistration }: Regist
           <div>
             {/* Notifikasi */}
             {notification && (
-              <div className={`mb-4 p-4 rounded-lg text-white ${
-                notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'
+              <div className={`mb-4 p-4 rounded-lg text-white dark:text-foreground ${
+                notification.type === 'success' ? 'bg-green-500 dark:bg-green-600' : 'bg-red-500 dark:bg-red-600'
               }`}>
                 {notification.message}
               </div>

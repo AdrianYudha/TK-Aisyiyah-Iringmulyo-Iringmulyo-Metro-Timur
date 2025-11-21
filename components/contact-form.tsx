@@ -56,13 +56,13 @@ export default function ContactForm() {
       </CardHeader>
       <CardContent className="pt-6">
         {success ? (
-          <div className="p-4 bg-green-100 text-green-700 rounded-lg text-center">
+          <div className="p-4 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg text-center">
             Pesan Anda telah dikirim! Kami akan segera menghubungi Anda.
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             {error && (
-              <div className="p-4 bg-destructive/10 text-destructive rounded-lg text-sm">
+              <div className="p-4 bg-destructive/10 dark:bg-destructive/20 text-destructive dark:text-destructive rounded-lg text-sm">
                 {error}
               </div>
             )}

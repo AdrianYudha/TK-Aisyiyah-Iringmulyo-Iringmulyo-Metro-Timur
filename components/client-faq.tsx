@@ -52,7 +52,7 @@ export default function ClientFAQ() {
             <span className={`text-accent text-xl transition-transform duration-700 ${openIndex === index ? 'rotate-45' : ''}`}>+</span>
           </summary>
           {openIndex === index && (
-            <div className="px-6 py-4 bg-white border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-700">
+            <div className="px-6 py-4 bg-white dark:bg-background border-t border-primary/20 text-muted-foreground font-medium leading-relaxed transition-opacity duration-700">
               {faq.answer}
             </div>
           )}

@@ -2,14 +2,15 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from '@/components/theme-provider'
 import "./globals.css"
 import ScrollToTop from "@/components/scroll-to-top"
 
-const _geist = Geist({ 
+const _geist = Geist({
   subsets: ["latin"],
   display: "swap" // Add swap for better font loading
 })
-const _geistMono = Geist_Mono({ 
+const _geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap" // Add swap for better font loading
 })
@@ -72,9 +73,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <body className={`${_geist.variable} font-sans antialiased`}>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
         <ScrollToTop />
         <Analytics />
       </body>

@@ -177,13 +177,13 @@ export default function RegistrationFormPage() {
             
             <CardContent className="pt-6">
               {error && (
-                <div className="mb-6 p-4 bg-destructive/10 border border-destructive/30 text-destructive rounded-lg text-sm font-medium">
+                <div className="mb-6 p-4 bg-destructive/10 dark:bg-destructive/20 border border-destructive/30 text-destructive dark:text-destructive rounded-lg text-sm font-medium">
                   ⚠️ {error}
                 </div>
               )}
               
               {success && (
-                <div className="mb-6 p-4 bg-green-100 border border-green-300 text-green-700 rounded-lg text-sm font-medium">
+                <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300 rounded-lg text-sm font-medium">
                   ✅ {success}
                 </div>
               )}
